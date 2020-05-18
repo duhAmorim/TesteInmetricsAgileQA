@@ -10,7 +10,7 @@ pipeline {
             steps{
                 echo 'Bilding resolve Dependencies'
                 sh 'bundler install'
-                sh 'bundler'
+                
             }   
         }
         stage('Test'){
