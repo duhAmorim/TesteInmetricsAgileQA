@@ -1,4 +1,4 @@
-
+require 'report_builder'
 After do |scenario|
   scenario_name = scenario.name.gsub(/\s+/,'_').tr('/','_')
 

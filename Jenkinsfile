@@ -16,7 +16,7 @@ pipeline {
         stage('Test'){
             steps {
                 echo 'running testes regreção'
-                sh 'bundler exec cucumber -p ci'
+                sh 'cucumber -p ci'
             }
             }
         stage('UAT'){
