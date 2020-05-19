@@ -16,7 +16,7 @@ pipeline {
         stage('Test'){
             steps {
                 echo 'running testes regreção'
-                sh 'bundler exec cucumber -p ci'
+                sh 'bundler exec cucumber'
                 cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
             }
             }
