@@ -16,7 +16,7 @@ pipeline {
         stage('Test'){
             steps {
                 echo 'running testes regreção'
-                sh 'bundler exec cucumber'
+                sh 'cucumber -p ci'
                 }
                 post{
                     always{
