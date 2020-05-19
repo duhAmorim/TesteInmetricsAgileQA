@@ -7,3 +7,5 @@
 /tmp/
 Gemfile.lock
 screenshot/
+.json
+.html
