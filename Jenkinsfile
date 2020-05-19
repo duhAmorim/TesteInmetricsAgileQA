@@ -17,8 +17,13 @@ pipeline {
             steps {
                 echo 'running testes regreção'
                 sh 'bundler exec cucumber'
-                cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
-            }
+                }
+                post{
+                    always{
+                            cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
+            
+                    }
+                }
             }
         stage('UAT'){
             steps{
